@@ -1,6 +1,5 @@
 import {
     EmbedBuilder,
-    PermissionFlagsBits,
     SlashCommandBuilder
 } from "discord.js";
 import axios from "axios";
@@ -21,7 +20,6 @@ const unitCommand = new SlashCommandBuilder()
             .setMaxLength(8)
             .setMinLength(6)
     )
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels);
 
 // Calls the QUT API to get some basic description information
 async function getUnit(unit) {
